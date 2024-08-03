@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "playtime",
+  "version": "${version}",
+
+  "name": "Playtime-Reborn",
+  "description": "",
+  "authors": [],
+  "contact": {},
+
+  "license": "unlicense",
+  "icon": "assets/playtime/icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "client": ["github.CiLuQwQ.playtime.client.PlaytimeClient"],
+    "main": ["github.CiLuQwQ.playtime.Playtime"]
+  },
+
+  "mixins": [
+    "playtime.mixins.json"
+    ,{
+      "config": "playtime.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
